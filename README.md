@@ -1,8 +1,8 @@
-# APK FolderMount
+# FolderMount
 破解 FolderMount.apk 方法
 
 ===================
-应用名称：FolderMount.apk
+应用名称：FolderMount.apk (中文名：文件夹挂载器)
 
 应用包名：com.devasque.fmount
 
@@ -15,6 +15,7 @@
 ② 找到 com/devasque/fmount/FolderpairActivity.smali 文件并打开，定位到如下代码：
 
 .method static constructor <clinit>()V
+
     .registers 2
 
     .prologue
@@ -28,6 +29,7 @@
 ③ 找到 com/devasque/fmount/custom/d.smali 文件并打开，定位到如下代码：
 
 .line 90
+
     sget-boolean v0, Lcom/devasque/fmount/FolderpairActivity;->c:Z
 
     if-eqz v0, :cond_13     (//将 :cond_13 修改为 :cond_5e) 具体你想修改为什么就是什么，随意。这里只是示例。
@@ -52,12 +54,15 @@
 在其之前粘贴上述复制代码，粘贴完成后将原位置的上述代码删除，其后的其他代码依次前移。
 
 【重要备注】 
+
 上述代码中 (//........) 为复制粘贴代码后再按照括号中说明修改。
+
 按照上述说明修改即可，修改后保存
 
 ④ 找到 com/devasque/fmount/a/p.smali 文件并打开，定位到如下代码：
 
 .line 578
+
     :cond_12
     sget-boolean v0, Lcom/devasque/fmount/FolderpairActivity;->c:Z
 
@@ -83,3 +88,5 @@
 
 → 我破解是因为我没有上述那个条件。穷逼的破解者一个。
 如果你愿意，请捐赠以支持我的破解工作。
+
+→ 如果有问题，请 <a href=https://github.com/APK-Patched/FolderMount/issues>在此</a> 提交你的问题。
